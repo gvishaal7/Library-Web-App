@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<title> Library Web App </title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+		<script src="../js/operations.js" type="text/javascript"> </script>
+		<script src="../js/admin.js" type="text/javascript"> </script>
+		<script src="../js/user.js" type="text/javascript"> </script>
+		<link rel="stylesheet" href="../css/mycss.css" />
+	</head>
+	<body>
+		<div id="inputDiv">
+			<div id="loginDiv" class="mainDiv">
+				<div id="loginTableDiv">
+					<table id="credTable" cellpadding="2" cellspacing="2">
+						<tr>
+							<td> User name : </td>
+							<td> <input type="text" id="userName" /> </td> 
+						</tr>
+						<tr>
+							<td> Password : </td>
+							<td> <input type="password" id="password" /></td>
+						</tr>
+						<tr>
+							<td> <button id="loginSubmit" class="submitButton"> Submit </button> </td>
+							<td> <button id="loginClear" class="clearButton"> Clear </button> </td>
+						</tr>
+						<tr>
+							<td> New User? </td>
+							<td> <a href=javascript:regLink() id="registerLink"> Register </a> </td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="registerDiv" style="display:none;" class="mainDiv">
+				<div id="backButtonDiv" class="returnDiv"> <button id="regBackButton" class="backButton"> Back </button> </div>
+				<div id="regTableDiv">
+					<table id="registrationTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td> User name : </td>
+							<td> <input type="text" id="regUName" /></td>
+						</tr>
+						<tr>
+							<td> Password : </td>
+							<td> <input type="text" id="regPass" /> </td>
+						</tr>
+						<tr>
+							<td> Email : </td>
+							<td> <input type="text" id="regEmail" /></td>
+						</tr>
+						<tr>
+							<td> Phone : </td>
+							<td> <input type="text" id="regPhone" /></td>
+						</tr>
+						<tr>
+							<td> <button id="registerSubmit" class="submitButton"> Register </button> </td>
+							<td> <button id="registerClear" class="clearButton"> Clear </button> </td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="responseDiv" style="display:none;"> 
+			<div id="logOutDiv" class="returnDiv"> <button id="logOutButton" class="backButton"> Log Out </button> </div>
+			<div id="adminDiv" style="display:none;" class="mainDiv"> 
+				<div id="adminOptionsDiv" class="subDiv"> 
+					<table id="adminOptionsTable" cellspacing="0" cellpadding="0">
+						<tr>
+							<td> <input type="radio" name="adminOptions" id="adminAddBook"  /> Add Book </td>
+							<td> <input type="radio" name="adminOptions" id="adminUpdateBook"  /> Update Books </td>
+							<td> <input type="radio" name="adminOptions" id="adminRemoveBook" /> Remove Books </td>
+							<td> <input type="radio" name="adminOptions" id="adminRemUser"  /> Remove User </td>
+							<td> <input type="radio" name="adminOptions" id="adminQueDet"  /> Queue Details </td>
+						</tr>
+					</table>
+				</div>
+				<div id="addBookDiv" class="subDiv" style='diplay:none'> 
+					<table id="adminAddBookTable" cellspacing="0" cellpadding="0">
+						<tr>
+							<td> Book Title : </td>
+							<td> <input type="text" id="addBookTitle" /> </td>
+						</tr>
+						<tr>
+							<td> ISBN No. : </td>
+							<td> <input type="text" id="addBookNo" /> </td>
+						</tr>
+						<tr>
+							<td> Author : </td>
+							<td> <input type="text" id="addBookAuthor" /> </td>
+						</tr>
+						<tr>
+							<td> Edition : </td>
+							<td> <input type="text" id="addBookEdition" /></td>
+						</tr>
+						<tr>
+							<td> No. Copies : </td>
+							<td> <input type="text" id="addBookCopies" /> </td>
+						</tr>
+						<tr>
+							<td> <button id="addBookSubmit" class="submitButton"> Add Book </button> </td>
+							<td> <button id="addBookClear" class="clearButton"> Clear </button> </td>
+						</tr>
+					</table>
+				</div>
+				<div id="updateBookDiv" class="subDiv"> </div>
+				<div id="removeBookDiv" class="subDiv"> </div>
+				<div id="remUserDiv" class="subDiv"> </div>
+				<div id="queDetDiv" class="subDiv"> </div>
+			</div>
+			<div id="userDiv" style="display:none;" class="mainDiv"> 
+				<div id="userOptionsDiv" class="subDiv"> 
+					<table id="userOptionsTable" cellspacing="0" cellpadding="0">
+						<tr>
+							<td> <input type="radio" name="userOptions" id="userBorrowBook" /> Borrow Book </td>
+							<td> <input type="radio" name="userOptions" id="userReturnBook" /> Return Book </td>
+							<td> <input type="radio" name="userOptions" id="bookMarkDetails" /> Place a Bookmark in a book </td>
+							<td> <input type="radio" name="userOptions" id="userHistory"  /> History </td>
+						</tr>
+					</table>
+					<div id="booksOnQueDiv"> </div>
+				</div>
+				<div id="borrowBookDiv" class="subDiv"> </div>
+				<div id="returnBookDiv" class="subDiv"> </div>
+				<div id="bookMarkDetDiv" class="subDiv"> 
+					<div id="bookMarkInputDiv"> </div>
+					<div id="bookMarkDetailsDiv"> </div>
+				</div>
+				<div id="history" class="subDiv"> </div>
+			</div>
+		</div> 
+	</body>
+</html> 
