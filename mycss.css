@@ -1,0 +1,20 @@
+table {
+	width : 100%;
+}
+.heading td {
+	font-weight : bold;
+	border : 1px solid black;
+	text-align : center;
+}
+
+#adminOptionsDiv, #userOptionsDiv {
+	border : 1px solid black;
+	margin-bottom: 20px;
+	margin-top : 20px;
+}
+
+.outputTable {
+	margin-top : 2px;	
+	margin-left :2px;
+	margin-right : 2px;
+}
