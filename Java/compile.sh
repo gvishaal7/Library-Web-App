@@ -1,4 +1,4 @@
-HOME_DIR= #your tomcat/lib directory
+HOME_DIR= #your tomcat/lib directory path
 
 export CLASSPATH=$HOME_DIR/gson-2.6.1.jar:$HOME_DIR/servlet-api.jar #all the jar files you want to include in your project
 
