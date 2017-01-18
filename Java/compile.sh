@@ -1,12 +1,15 @@
-HOME_DIR=/Users/vishaalgopalan/Desktop/Softwares/apache-tomcat-8.5.9/lib
+HOME_DIR= #your tomcat/lib directory
 
-export CLASSPATH=$HOME_DIR/gson-2.6.1.jar:$HOME_DIR/servlet-api.jar
+export CLASSPATH=$HOME_DIR/gson-2.6.1.jar:$HOME_DIR/servlet-api.jar #all the jar files you want to include in your project
 
-JDK_HOME=/usr/bin
+JDK_HOME=/usr/bin #jdk home page
 
 $JDK_HOME/javac -d jar validate.java
 $JDK_HOME/javac -d jar adminOperations.java
 $JDK_HOME/javac -d jar userOperations.java 
+
+#create a directory as jar/com/library in the java folder
+#this is where you will store your class files
 
 cd jar
 $JDK_HOME/jar -cvf com.jar com
